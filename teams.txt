@@ -1,0 +1,10 @@
+ Frontend Team: 
+ Mike**(leader), Charles, Thomas, TY, Dale, Alec, Brandon, Robert
+ 
+ Backend Team: 
+ Jimmy**(leader), Trevor, Michael, Josh, Nathan, Jake
+ 
+ Database Team: 
+ Derek**(leader), Fracis, Devon, Morgan, Jimmy, Colton
+
+ Project Manager: Dr. Sun
