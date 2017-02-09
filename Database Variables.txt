@@ -1,0 +1,7 @@
+Users: Username, password, UNIQUE ID(could be username), DOB, Age, Sex, Address, Picture ID
+Driver: ISA User, Travel Location, license information, Cars(Shared), Car Insurance(shared), Time Active/Schedule
+Customer: ISA User, Location
+Cars: Shared Username/unique ID, unique Car ID, color, model, year, insured, size, travel location, License plate
+Package: Unique Package ID, Shared Username, size, weight, destination, receiver information(User/Customer preferred)
+Locations/Trips: Radius of locations, travel paths, duration - posted/submitted by Drivers
+Insurance: Unique Insurance ID, Shared Car ID, expiration, company
