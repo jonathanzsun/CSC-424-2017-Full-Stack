@@ -110,7 +110,7 @@ infoWindow: {
     }
     
     jQuery(document).on('ready', function() {
-        jQuery('form#login_page').bind('submit', function(event){
+        jQuery('form#login_form').bind('submit', function(event){
             event.preventDefault();
             
             var form = this;
