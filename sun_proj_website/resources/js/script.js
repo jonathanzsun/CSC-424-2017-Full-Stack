@@ -125,45 +125,36 @@ infoWindow: {
             }).done(function() {
                 tbody.append(form['account'].value + form['password'].value);
             }).fail(function() {
-                alert("Failed to add to-do");
+                alert("Failed to authenticate");
             });
             
             return true;
         });
     });
     
-    /*
-    // programming the JSON capture for login
-    // gratuitiously stolen from https://code.lengstorf.com/get-form-values-as-json/
-    const handleFormSubmit = event => {
-        event.preventDefault();
-        
-        const data = {};
-        
-        const dataContainer = document.getElementsByClassName('login_form')[0];
-        
-        dataContainer.textContent = JSON.stringify(data, null, "  ");
-    }
-    
-    const form = document.getElementsByClassName('login_form')[0];
-    form.addEventListener('submit', handleFormSubmit);
-    
-    const formToJSON = elements => [].reduce.call(elements, (data, element) => {
-        data[element.name] = element.value;
-        return data;
-    }, {});
-    
-    const handleFormSubmit = event => {
-        
-        event.preventDefault();
-        
-        const data = formToJSON(form.elements);
-        
-        dataContainer.textContent = JSON.stringify(data, null, "  ");
-    };
-    
-    const form = document.getElementsByClassName('login_form')[0];
-    form.addEventListener('submit', handleFormSubmit);
-    
-    */
+        jQuery(document).on('ready', function() {
+        jQuery('form#register_form').bind('submit', function(event){
+            event.preventDefault();
+
+            var form = this;
+            var json = ConvertFormToJSON(form);
+            var tbody = jQuery('#register_form > tbody');
+
+            $.ajax({
+                type: "POST",
+                url: "",
+                data: json,
+                dataType: "json"
+            }).done(function() {
+                tbody.append(form['first_name'].value + form['last_name'].value + form['license_state'].value
+                            + form['license_number'].value + form['insurance_name'].value
+                            + form['insurance_number'].value + form['account'].value + form['password'].value);
+            }).fail(function() {
+                alert("Failed to create account");
+            });
+
+            return true;
+        });
+    });
+
 });
