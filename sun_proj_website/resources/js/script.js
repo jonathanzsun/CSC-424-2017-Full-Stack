@@ -85,15 +85,14 @@ $(document).ready(function () {
     /* including a GMAPS */
     var map = new GMaps({
       div: '.map',
-      lat: -12.043333,
-      lng: -77.028333,
-        zoom: 12
+      lat: 31.330368,
+      lng: -89.334601,
 });
     
     map.addMarker({
-  lat: -12.043333,
-  lng: -77.028333,
-  title: 'Lima',
+  lat: 31.330368,
+  lng: -89.334601,
+  title: 'Hattiesburg',
 infoWindow: {
   content: '<p>Our Headquarters</p>'
 }
