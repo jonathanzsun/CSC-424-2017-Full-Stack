@@ -427,7 +427,8 @@ header {
 }
 
 .app-screen {
-    width: 40%;
+    width: 35%;
+    z-index: 9999;
     /* fits 40% of total container */
 }
 

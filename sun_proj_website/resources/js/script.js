@@ -147,8 +147,8 @@ infoWindow: {
                 dataType: "json"
             }).done(function() {
                 tbody.append(form['first_name'].value + form['last_name'].value + form['license_state'].value
-                            + form['license_number'].value + form['insurance_name'].value
-                            + form['insurance_number'].value + form['account'].value + form['password'].value);
+                + form['license_number'].value + form['insurance_name'].value
+                + form['insurance_number'].value + form['account'].value + form['password'].value);
             }).fail(function() {
                 alert("Failed to create account");
             });
