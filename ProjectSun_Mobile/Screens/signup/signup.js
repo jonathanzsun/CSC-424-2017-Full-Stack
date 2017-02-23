@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import {
-    AppRegistry,
     StyleSheet,
     Text,
     View,
     Image,
     TextInput,
-    TouchableOpacity
+    TouchableOpacity,
+    Navigator
 } from 'react-native'
 
 const background = require("./signup_bg.png");
@@ -28,7 +28,15 @@ export default class SignupView extends Component {
                     <View style={styles.headerContainer}>
 
                         <View style={styles.headerIconView}>
-                            <TouchableOpacity style={styles.headerBackButtonView}>
+                            { /*
+                            This is the back button used to go back to the 'Login' route.
+                                 onPress={ () => this.props.navigator.pop()} sends the scene page back to the
+                                 Login page. Just think of it like a stack. It goes back one page.
+                                 Login PUSH-> Sign Up POP -> Login
+
+                                 --Ty
+                         */}
+                            <TouchableOpacity style={styles.headerBackButtonView} onPress={ () => this.props.navigator.pop()}>
                                 <Image
                                     source={backIcon}
                                     style={styles.backButtonIcon}
@@ -100,8 +108,16 @@ export default class SignupView extends Component {
                                 <Text style={styles.whiteFont}>Join</Text>
                             </View>
                         </TouchableOpacity>
+                        {/*Using navigator.push here instead of pop just incase we use this page elsewhere.
+                            The back button have a different function anyway
+                            WARNING!!!!
+                            This could possibly be an issue. Technically we are just pushing the Login again so the stack looks like..
+                            Login->Sign Up -> Login.. which a user could recursively push on top of each other making the
+                            navigator hierarchy really big. pop() could be used instead of push. Might change later.
 
-                        <TouchableOpacity>
+                            --Ty
+                            */}
+                        <TouchableOpacity onPress={ () => this.props.navigator.push({name:'Login'})}>
                             <View style={styles.signin}>
                                 <Text style={styles.greyFont}>Already have an account?<Text style={styles.whiteFont}> Sign In</Text></Text>
                             </View>
