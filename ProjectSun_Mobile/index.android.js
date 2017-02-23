@@ -1,53 +1,41 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+    AppRegistry
+}   from 'react-native';
+
+import Login from './src/pages/Login';
 
 export default class ProjectSun extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
-    );
-  }
+    render(){
+        return(
+            <Login />
+        );
+    }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+AppRegistry.registerComponent('ProjectSun', () => ProjectSun)
 
-AppRegistry.registerComponent('ProjectSun', () => ProjectSun);
+//Create a src/pages and a Login.js
+//npm install --save react-native-vector-icons
+
+//Go to android/app/build.gradle and add reference to package
+//dependencies {compile porject(':react-native-vector-icons')}
+
+//Now go to android/settings.gradle and add
+//include ':react-native-vector-icons'
+//project(':react-native-vector-icons').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-vector-icons/android')
+
+//Open android/app/src/main/java/com/ProjectSun/MainApplication.java
+//import packages:
+//import java.util.Arrays;
+//import java.util.List;
+//import com.oblador.vectoricons.VectorIconsPackage;
+
+//And initialize the whole kitten kaboodle
+//@Override
+//protected List<ReactPackage> getPackages(){
+    //return ANGLE_instanced_arrays.<ReactPackage>asList(
+        //new MainReactPackage(),
+        //new VectorIconsPackage()
+    //);
+//}
