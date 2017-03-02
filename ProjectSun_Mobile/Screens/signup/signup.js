@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+
 import {
     StyleSheet,
     Text,
@@ -8,13 +9,19 @@ import {
     TouchableOpacity,
     Navigator
 } from 'react-native'
+/*
+Login SDK and button for Facebook
+ */
+const FBSDK = require('react-native-fbsdk');
+const {
+    LoginButton,
+} = FBSDK;
 
 const background = require("./signup_bg.png");
 const backIcon = require("./back.png");
 const personIcon = require("./signup_person.png");
 const lockIcon = require("./signup_lock.png");
 const emailIcon = require("./signup_email.png");
-const birthdayIcon = require("./signup_birthday.png");
 
 export default class SignupView extends Component {
     render() {
@@ -99,6 +106,27 @@ export default class SignupView extends Component {
                                 placeholderTextColor="#FFF"
                             />
                         </View>
+                        <View style={styles.headerContainer}>
+                            <View style={styles.facebook}>
+                                <LoginButton
+                                    onLoginFinished={
+                                        (error, result) => {
+                                            if (error) {
+                                                alert("login has error: " + result.error);
+                                            } else if (result.isCancelled) {
+                                                alert("login is cancelled.");
+                                            } else {
+                                                AccessToken.getCurrentAccessToken().then(
+                                                    (data) => {
+                                                        this.goToHomePage();
+                                                    }
+                                                )
+                                            }
+                                        }
+                                    }
+                                />
+                            </View>
+                        </View>
                     </View>
 
                     <View style={styles.footerContainer}>
@@ -122,6 +150,9 @@ export default class SignupView extends Component {
                                 <Text style={styles.greyFont}>Already have an account?<Text style={styles.whiteFont}> Sign In</Text></Text>
                             </View>
                         </TouchableOpacity>
+                        <View>
+
+                        </View>
                     </View>
                 </Image>
             </View>
@@ -132,6 +163,11 @@ export default class SignupView extends Component {
 let styles = StyleSheet.create({
     container: {
         flex: 1,
+    },
+    facebook:{
+        paddingTop: 30,
+        alignItems: "center"
+
     },
     bg: {
         paddingTop: 30,

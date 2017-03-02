@@ -10,7 +10,7 @@ import {
 
 import LoginScreen from "./Screens/Login/login";
 import SignupScreen from "./Screens/signup/signup";
-import MainView from "./Screens/mainView/mainView";
+//import MainView from "./Screens/mainView/mainView"; haven't uploaded yet --Ty 
 
 export default class App extends Component {
     renderScene(route, navigator) {
@@ -24,9 +24,10 @@ export default class App extends Component {
         }
         
         //This is the Nav for the main page. --Ty
-        if(route.name == 'MainView'){
-            return <MainView navigator={navigator} {...route.passProps} />
-        }
+        //        if(route.name == 'MainView'){
+        //            return <MainView navigator={navigator} {...route.passProps} />
+        //        }
+        //Haven't uploaded page yet
     }
 
     render() {
