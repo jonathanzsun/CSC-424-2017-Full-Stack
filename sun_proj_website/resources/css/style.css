@@ -256,7 +256,15 @@ header {
 .main-nav {
     float: right;
     list-style: none;
-    margin-top: 55px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    width: 100%;
+    background: black;
+}
+
+.main-links {
+    margin-top: 50px;
 }
 
 .main-nav li {
@@ -269,11 +277,11 @@ header {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 90%;
+    font-size: 100%;
     border-bottom: 2px solid transparent;
     -webkit-transition: border-bottom 0.3s;
     transition: border-bottom 0.3s;
-    padding: 8px 0;
+    padding: 0px;
 }
 
 .main-nav li a:hover,
@@ -655,6 +663,10 @@ input[type=checkbox] {
     z-index: 10;
     height: 560px;
     padding-top: 40px;
+}
+
+.form-input {
+    
 }
 
 

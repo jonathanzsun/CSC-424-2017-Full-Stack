@@ -26,14 +26,20 @@
 <body>
     <header>
         <nav>
-            <div class="row" role="banner"> <img src="resources/img/logo.png" alt="Sun Project logo" class="logo">
-                <ul class="main-nav js--main-nav">
-                    <li><a href="index.html">Sun Project</a></li>
-                    <li><a href="customer.html">Customers</a></li>
-                    <li><a href="drivers.html">Drivers</a></li>
-                    <li><a href="cities.html">Cities</a></li>
-                    <li><a href="login.html">Login</a></li>
-                </ul> <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a> </div>
+           <div class="row" role="banner">
+            <ul class="main-nav js--main-nav">
+                   <div class="col">
+                <li>
+                     <img src="resources/img/logo.png" alt="Sun Project logo" class="logo">
+                </li></div>
+                <div class="col span-2-of-3 main-links">
+                <li><a href="index.html">Sun Project</a></li>
+                <li><a href="customer.html">Customers</a></li>
+                <li><a href="drivers.html">Drivers</a></li>
+                <li><a href="cities.html">Cities</a></li>
+                    <li><a>stuff<script>html = new EJS({ url: '../ts_node/app/views/login.ejs'}).redner(data);</script></a></li>
+                    <!-- <li><a href="../ts_node/app/views/login.ejs" >Login</a></li></div> -->
+            </ul></div>
         </nav>
         <div class="hero-text-box">
             <h1>Tired of Expensive Delivery Companies?<br>Hello "Uber" for Packages.</h1> <a class="btn btn-full js--scroll-to-plan" href="#">I love saving money</a> <a class="btn btn-ghost js--scroll-to-start" href="#">Show me more</a> </div>
