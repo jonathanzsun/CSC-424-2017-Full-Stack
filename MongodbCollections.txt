@@ -1,0 +1,29 @@
+Collections
+ People
+  Name
+  DOB
+  Photo Identification
+  License
+   License Expiration, License #
+  Address
+  Phone Number
+  Insurance
+    Agency, Expiration, Policy #
+  Car
+    Model, Year, License Plate
+  Cities to Travel to
+  User ID
+  Password
+  Subscriptions?
+  Location
+    Availability, Longitude, Latitude
+ Packages/Transactions
+  SenderUserName
+  DriverUserName
+  Package ID
+  Weight
+  Size
+  Address
+   From, To
+  Costs
+  Status
