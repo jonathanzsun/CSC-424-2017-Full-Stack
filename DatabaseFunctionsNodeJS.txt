@@ -1,0 +1,77 @@
+Function addUserDocument(UserID, PassWord, fName, lName, Mi, DOB, PhoneNo, Email)
+{
+
+var db = mongoclient.db("ProjectSun");
+db.people.insert({“UserName” : UserID, pwd : PassWord, “Name” : [{“First” : fName , “Last” : lName, “MiddleInitial” : Mi}], “PhoneNo” : PhoneNo, email : Email }, function(err, results))
+assert.equal(null, err);
+
+}
+
+Function UpdatetoDriver(UserID, License, State, InsurancePolicyNumber, InsuranceProvider, Street, State, Zipcode, CarModel, CarPlate, CarColor, CarYear)
+{
+#include Json with server connection
+var db = mongoclient.db("ProjectSun");
+db.people.update(
+{
+    UserName : UserID
+}.
+{    
+
+    Address : [{
+Street : Street
+State: State
+Zipcode : Zipcode}]
+    License : [{
+        “LicenseNumber” : License,
+        “State” : State
+}],
+Insurance : [{
+“Policy #” : InsurancePolicyNumber,
+“Provider” : InsuranceProvider}],
+    Car : [{
+PlateID : CarPlate
+Model : CarModel
+Color : CarColor
+Year : CarYear}]
+
+}, function(err, result));
+assert.equal(null,err);
+}
+
+Function UpdateInformation(UserID, Field, Value)
+{
+#include JSON
+Var db = mongoclient.db(“ProjectSun”);
+db.people.update({UserName : UserID}, {Field : Value}, function(err, result));
+assert.equal(null,err);
+}
+
+Function UpdatePassWord(UserID, OldPW, NewPW)
+{
+#include JSON
+Var db = mongoclient.db(“ProjectSun”);
+db.people.update({UserName : UserID, pwd: OldPW}, {pwd : NewPW}, function(err,result));
+assert.equal(null,err);
+}
+
+Function addPackage(SenderUserName, DriverUserName, Weight, Size, AddressTo, AddressFrom)
+{
+Var db = mongoclient.db(“ProjectSun”);
+db.package.insert({Sender: SenderUserName, Driver : DriverUserName, Weight : Weight, Size: Size, Address: [To : AddressTo, From: AddressFrom]});
+}
+
+Function SearchLogIns(UserID, Password)
+{
+// Set up the connection to the local db
+ var mongoclient = new MongoClient(new Server("localhost", 27017), {native_parser: true});
+
+ // Open the connection to the server
+ mongoclient.open(function(err, mongoclient) {
+
+Var db = mongoclient.db(“ProjectSun”);
+db.people.find({UserName : UserID, pwd: Password})
+mongoclient.close();
+});
+}
+
+
