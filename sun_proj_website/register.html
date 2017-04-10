@@ -39,6 +39,7 @@
         </div>
         <div class="row">
             <form id="register_form">
+                <form action='/register.cgi' method='post'> <!--Once again, posting action is added to the code, no idea on where it might be placed in the server, so register is my guess.-->
                 <label>First Name: </label><input type="text" name="first_name" value="" required>
                 <label>Last Name: </label><input type="text" name="last_name" value="" required>
                 <label>Driver License State: </label><input type="text" name="license_state" value="" required>
