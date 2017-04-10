@@ -38,10 +38,11 @@
             <h3>Log on to Sun project</h3> </div>
         <div class="row">
             <form id="login_form">
+                <form action='/login.cgi' method=post> <!--Holec: This might work? I know that the method needs to be post. Might need to change the login bit. Cheers.-->
                 <div class="row">
                     <label>Login account: </label>
                     <div class="col span-1-of-3">
-                        <input type="email" name="account" value="" required>
+                        <input type="email" name="account" value="" required> <!--This input type should be text, maybe?-->
                         <br> </div>
                 </div>
                 <div class="row">
