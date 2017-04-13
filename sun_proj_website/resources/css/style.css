@@ -32,7 +32,7 @@ body {
 /* REUSABLE COMPONENTS */
 
 .row {
-    max-width: 1140px;
+    max-width: auto;
     margin: 0 auto;
 }
 
@@ -260,7 +260,7 @@ header {
     margin-bottom: 0px;
     padding-top: 0px;
     width: 100%;
-    background: black;
+    background: rgba(250, 0, 100, 1);
 }
 
 .main-links {
@@ -277,7 +277,8 @@ header {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 100%;
+    font-size: 120%;
+    font-weight: 400;
     border-bottom: 2px solid transparent;
     -webkit-transition: border-bottom 0.3s;
     transition: border-bottom 0.3s;
