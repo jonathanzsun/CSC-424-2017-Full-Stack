@@ -13,6 +13,7 @@ body {
     font-size: 20px;
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
+    
     /* stops text from overflowing to the right when resizing window */
 }
 
@@ -173,7 +174,7 @@ input[type=submit] {
 .btn-full:link,
 .btn-full:visited,
 input[type=submit] {
-    background-color: #e67e22;
+    background-color: rgba(250, 0, 100, 1);;
     border: 1px solid #e67e22;
     color: #fff;
     margin-right: 15px;
@@ -181,8 +182,8 @@ input[type=submit] {
 
 .btn-ghost:link,
 .btn-ghost:visited {
-    border: 1px solid #e67e22;
-    color: #e67e22;
+    border: 1px solid #000;
+    color: rgba(250, 0, 100, 1);
 }
 
 
@@ -192,17 +193,17 @@ input[type=submit] {
 .btn:active,
 input[type=submit]:hover,
 input[type=submit]:active {
-    background-color: #cf6d17;
+    background-color: rgba(250, 0, 100, 1);
 }
 
 .btn-full:hover,
 .btn-full:active {
-    border: 1px solid #cf6d17;
+    border: 1px solid #fff;
 }
 
 .btn-ghost:hover,
 .btn-ghost:active {
-    border: 1px solid #cf6d17;
+    border: 1px solid #fff;
     color: #fff;
 }
 
@@ -260,25 +261,26 @@ header {
     margin-bottom: 0px;
     padding-top: 0px;
     width: 100%;
-    background: rgba(250, 0, 100, 1);
+    background: #fff;
 }
 
 .main-links {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .main-nav li {
     display: inline-block;
     margin-left: 40px;
+    margin-bottom: 5px;
 }
 
 .main-nav li a:link,
 .main-nav li a:visited {
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 120%;
-    font-weight: 400;
+    color: #000;
+    text-decoration: none; 
+    text-transform:  uppercase;
+    font-size: 130%;
+    font-weight: 600;
     border-bottom: 2px solid transparent;
     -webkit-transition: border-bottom 0.3s;
     transition: border-bottom 0.3s;
@@ -675,13 +677,28 @@ input[type=checkbox] {
 
 .section-footer {
     padding-bottom: 0px;
+    width:100%;
+    bottom: 0;
+    left: 0;
+    right 0;
 }
+
 
 footer {
     background-color: #333;
     padding: 40px;
     font-size: 80%;
+    width: 100%;
 }
+
+.main-view-footer {
+    padding-bottom: 0px;
+    position: fixed;
+        bottom: 0;
+    left: 0;
+    right 0;
+}
+
 
 .footer-nav {
     list-style: none;
@@ -777,4 +794,12 @@ footer p {
 .js--wp-2.animated,
 .js--wp-3.animated {
     opacity: 1;
+}
+
+
+/* MAIN-VIEW CSS */
+.track-links {
+    padding: 10px;
+    border: solid;
+    
 }
