@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Sun Project customer page placeholder.">
+    <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
+    <title>Login Page</title>
+    <meta name="theme-color" content="#ffffff"> </head>
+
+<body>
+<div class="customer-nav">
+    <nav>
+        <div class="row"> <img src="/images/logo.png" alt="Sun Project logo" class="logo">
+            <ul class="main-nav js--main-nav">
+                <li><a href="/">Sun Project</a></li>
+                <li><a href="/customer">Customers</a></li>
+                <li><a href="/drivers">Drivers</a></li>
+                <li><a href="/cities">Cities</a></li>
+                <li><a href="/login">Login</a></li>
+            </ul> <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a> </div>
+    </nav>
+</div>
+<section class="need_space">
+    <div class="row">
+        <h3>Section 1 header</h3> </div>
+    <div class="row">
+        <p>Basic Login Page descriptor, are we handling both customer and drivers through one page?</p>
+    </div>
+</section>
+<section class="login_page">
+    <div class="row">
+        <h3>Log on to Sun project</h3> </div>
+    <div class="row">
+
+    </div>
+    <div class="row">
+        <p>Need to register? Click <a href="/signup">here</a>.</p>
+        <h1><span class="fa fa-sign-in"></span> Login</h1>
+
+        <!-- show any messages that come back with authentication -->
+        <% if (message.length > 0) { %>
+        <div class="alert alert-danger"><%= message %></div>
+        <% } %>
+
+        <!-- LOGIN FORM -->
+        <form action="/login" method="post">
+            <div class="form-group">
+                <label>Email</label>
+                <input type="text" class="form-control" name="email">
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" name="password">
+            </div>
+
+            <button type="submit" class="btn btn-warning btn-lg">Login</button>
+        </form>
+
+    </div>
+</section>
+<section class="section-footer">
+    <footer>
+        <div class="row">
+            <div class="col span-1-of-2">
+                <ul class="footer-nav">
+                    <li><a href="/about">About us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">iOS App</a></li>
+                    <li><a href="#">Android App</a></li>
+                </ul>
+            </div>
+            <div class="col span-1-of-2">
+                <ul class="social-icons">
+                    <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                    <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                    <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                    <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <p> Copyright &copy; 2016 by CSC 424. All rights reserved </p>
+        </div>
+    </footer>
+</section>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/g/respond@1.4.2(respond.min.js+respond.src.js)"></script>
+<script src="html5shiv@3.7.3(html5shiv.min.js+html5shiv.js)"></script>
+<script src="selectivizr@1.0.3b(selectivizr.min.js+selectivizr.js)"></script>
+<script src="vendors/js/jquery.waypoints.min.js"></script>
+<script src="resources/js/script.js"></script>
+<script src="vendors/js/gmaps.js"></script>
+<script src="http://maps.google.com/maps/api/js"></script>
+</body>
+
+</html>

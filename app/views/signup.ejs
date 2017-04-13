@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Sun Project customer page placeholder.">
+    <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
+    <title>TEMPLATE</title>
+    <meta name="theme-color" content="#ffffff"> </head>
+
+<body>
+<div class="customer-nav">
+    <nav>
+        <div class="row"> <img src="/images/logo.png" alt="Sun Project logo" class="logo">
+            <ul class="main-nav js--main-nav">
+                <li><a href="/">Sun Project</a></li>
+                <li><a href="/customer">Customers</a></li>
+                <li><a href="/drivers">Drivers</a></li>
+                <li><a href="/cities">Cities</a></li>
+                <li><a href="/login">Login</a></li>
+            </ul> <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a> </div>
+    </nav>
+</div>
+<section class="need_space">
+    <div class="row">
+        <h3>Section 1 header</h3> </div>
+    <div class="row">
+        <p>This page is used for registering a new user. Currently there is no distinction between drivers and users</p>
+    </div>
+</section>
+<section class="">
+    <div class="row">
+        <h3>Register here:</h3>
+    </div>
+    <div class="row">
+        <!--<form id="register_form">-->
+        <!--<label>First Name: </label><input type="text" name="first_name" value="" required>
+        <label>Last Name: </label><input type="text" name="last_name" value="" required>
+        <label>Driver License State: </label><input type="text" name="license_state" value="" required>
+        <label>Driver License Number: </label><input type="text" name="license_number" value="" required>
+        <label>Insurance Carrier: </label><input type="text" name="insurance_name" value="">
+        <label>Insurance Policy Number: </label><input type="text" name="insurance_number" value="">-->
+
+        <!-- <div class="row spacing-top">
+             <label>Email: </label><input type="text" name="email" value="" required><br>
+             <label>Password: </label><input type="password" name="password" value="" required><br>
+         </div>
+         <inputtype="submit" ><input type="reset">
+     </form>-->
+        <h1><span class="fa fa-sign-in"></span> Signup</h1>
+
+        <!-- show any messages that come back with authentication -->
+        <% if (message.length > 0) { %>
+        <div class="alert alert-danger"><%= message %></div>
+        <% } %>
+
+        <!-- LOGIN FORM -->
+        <form action="/signup" method="post">
+            <div class="form-group">
+                <label>Email</label>
+                <input type="text" class="form-control" name="email">
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" name="password">
+            </div>
+
+            <button type="submit" class="btn btn-warning btn-lg">Signup</button>
+        </form>
+
+    </div>
+</section>
+<section class="section-footer">
+    <footer>
+        <div class="row">
+            <div class="col span-1-of-2">
+                <ul class="footer-nav">
+                    <li><a href="/about">About us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">iOS App</a></li>
+                    <li><a href="#">Android App</a></li>
+                </ul>
+            </div>
+            <div class="col span-1-of-2">
+                <ul class="social-icons">
+                    <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                    <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                    <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                    <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <p> Copyright &copy; 2016 by CSC 424. All rights reserved </p>
+        </div>
+    </footer>
+</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/g/respond@1.4.2(respond.min.js+respond.src.js)"></script>
+<script src="html5shiv@3.7.3(html5shiv.min.js+html5shiv.js)"></script>
+<script src="selectivizr@1.0.3b(selectivizr.min.js+selectivizr.js)"></script>
+<script src="vendors/js/jquery.waypoints.min.js"></script>
+<script src="resources/js/script.js"></script>
+<script src="vendors/js/gmaps.js"></script>
+<script src="http://maps.google.com/maps/api/js"></script>
+</body>
+
+</html>
