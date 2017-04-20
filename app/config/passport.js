@@ -95,11 +95,11 @@ module.exports = function(passport) {
 
     passport.use('package-post', new LocalStrategy({
             // by default, local strategy uses username and password, we will override with email
-            usernameField : 'receiver',
-            passwordField : 'package_id',
+            usernameField : 'receiver_name',
+            passwordField : 'package_zip',
             passReqToCallback : true // allows us to pass back the entire request to the callback
         },
-        function(req,package_id, depart_zip, arrive_zip, receiver, package_size, weight, price,  done) {
+        function(req, depart_zip, receiver_zip, receiver_name, package_size, package_weight,  done) {
 
             // asynchronous
             // User.findOne wont fire unless data is sent back
@@ -107,7 +107,7 @@ module.exports = function(passport) {
 
                 // find a user whose email is the same as the forms email
                 // we are checking to see if the user trying to login already exists
-                Packages.findOne({ 'package.package_id' :  package_id }, function(err, packages) {
+                Packages.findOne({ 'package.receiver_name' :  receiver_name }, function(err, packages) {
                     // if there are any errors, return the error
                     if (err)
                         return done(err);
@@ -122,14 +122,19 @@ module.exports = function(passport) {
                         var newPackage            = new Packages();
 
                         // set the user's local credentials
-                        newPackage.package.package_id    = package_id;
+                        //newPackage.package.package_id    = package_id;
                         newPackage.package.depart_zip = depart_zip;
-                        newPackage.package.arrive_zip = arrive_zip;
-                        newPackage.package.receiver = receiver;
+                        newPackage.package.receiver_zip = receiver_zip;
+                        newPackage.package.receiver_name = receiver_name;
                         newPackage.package.package_size = package_size;
-                        newPackage.package.weight = weight;
-                        newPackage.package.price = price;
+                        newPackage.package.package_weight = package_weight;
+                        //newPackage.package.price = price;
 
+                        console.log(depart_zip);
+                        console.log(receiver_zip);
+                        console.log(receiver_name);
+                        console.log(package_size);
+                        console.log(package_weight);
                         // save the user
                         newPackage.save(function(err) {
                             if (err)

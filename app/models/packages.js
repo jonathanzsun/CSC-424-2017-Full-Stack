@@ -7,13 +7,13 @@ var mongoose = require('mongoose');
 var packageSchema = mongoose.Schema({
 
     package: {
-        package_id: String,
+
         depart_zip: String,
-        arrive_zip: String,
-        receiver: String,
+        receiver_zip: String,
+        receiver_name: String,
         package_size: String,
-        weight: Double,
-        price: Double,
+        package_weight: Number,
+
     }
 
 });

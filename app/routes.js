@@ -46,6 +46,10 @@ module.exports = function(app, passport) {
         res.render('about.ejs');
     });
 
+    app.get('/package_pool', function(req,res) {
+        res.render('package_pool.ejs');
+    });
+
     // process the login form
     // app.post('/login', do all our passport stuff here);
 
@@ -77,6 +81,9 @@ module.exports = function(app, passport) {
             packages: req.packages
         });
     });
+    app.get('/sendPackage', function(req,res){
+        res.render('sendPackage.ejs');
+    });
 
     // =====================================
     // FACEBOOK ROUTES =====================
@@ -106,7 +113,7 @@ module.exports = function(app, passport) {
     }));
 
     app.post('/packages', passport.authenticate('package-post', {
-        successRedirect: '/packages',
+        successRedirect: '/package_pool',
         failureRedirect: '/profile',
         failureFlash: true
     }));
