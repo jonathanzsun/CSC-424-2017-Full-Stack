@@ -49,6 +49,13 @@ module.exports = function(app, passport) {
     app.get('/package_pool', function(req,res) {
         res.render('package_pool.ejs');
     });
+    app.get('/listPackages',function(req,res){
+        var data = require('./views/testData.json');
+        res.render('listPackages.ejs',{data:data});
+    });
+    app.get('/active',function(req, res){
+        res.render('active.ejs', req.package);
+    });
 
     // process the login form
     // app.post('/login', do all our passport stuff here);
