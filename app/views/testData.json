@@ -1,0 +1,44 @@
+ [
+    {
+      "dest": "Florida",
+      "weight": 2,
+      "size": 4,
+      "howFar": 35
+    },
+    {
+      "dest": "Ala",
+      "weight": 2,
+      "size": 4,
+      "howFar": 31
+    },
+    {
+      "dest": "MS",
+      "weight": 2,
+      "size": 4,
+      "howFar": 32
+    },
+    {
+      "dest": "wut",
+      "weight": 2,
+      "size": 4,
+      "howFar": 40
+    },
+   {
+     "dest": "yes",
+     "weight": 2,
+     "size": 4,
+     "howFar": 49
+   },
+   {
+     "dest": "this stuff",
+     "weight": 2,
+     "size": 4,
+     "howFar": 50
+   },
+   {
+     "dest": "Poop12442",
+     "weight": 2,
+     "size": 4,
+     "howFar": 100
+   }
+  ]
