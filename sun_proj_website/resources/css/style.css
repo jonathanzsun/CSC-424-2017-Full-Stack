@@ -1,3 +1,7 @@
+/* 
+color selections: #ffaa00 - orange, #00bbff - light blue 
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -83,16 +87,12 @@ h3 {
 h2:after {
     display: block;
     height: 2px;
-    background-color: #e67e22;
+    background-color: #ffaa00;
     content: " ";
     width: 100px;
     margin: 0 auto;
     margin-top: 30px;
 }
-
-
-/*flatuicolors.com color selection*/
-
 
 /* ---- PARAGRAPHS ------ */
 
@@ -108,13 +108,12 @@ h2:after {
     line-height: 145%;
 }
 
-
 /* ---- ICONS ------ */
 
 .icon-big {
     font-size: 300%;
     display: block;
-    color: #e67e22;
+    color: #ffaa00;
     margin-bottom: 10px;
 }
 
@@ -124,7 +123,7 @@ h2:after {
     width: 30px;
     text-align: center;
     /* allows to be centered */
-    color: #e67e22;
+    color: #ffaa00;
     font-size: 120%;
     /* *** this is one technique to align icons *** */
     line-height: 120%;
@@ -133,16 +132,15 @@ h2:after {
     /* takes away space */
 }
 
-
 /* ---- LINKS   ------ */
 
 a:link,
 a:visited {
-    color: #e67e22;
+    color: #ffaa00;
     text-decoration: none;
     /* removes underline */
     padding-bottom: 1px;
-    border-bottom: 1px solid #e67e22;
+    border-bottom: 1px solid #ffaa00;
     /* adds a border (artificially) */
 }
 
@@ -155,7 +153,6 @@ a:active {
     transition: border-bottom 0.4s, color 0.4s;
     /* transistion element for dissappearing the underline */
 }
-
 
 /* ---- BUTTONS ------ */
 
@@ -174,8 +171,8 @@ input[type=submit] {
 .btn-full:link,
 .btn-full:visited,
 input[type=submit] {
-    background-color: rgba(250, 0, 100, 1);;
-    border: 1px solid #e67e22;
+    background-color: #00bbff;
+    border: 1px solid #ffaa00;
     color: #fff;
     margin-right: 15px;
 }
@@ -183,17 +180,14 @@ input[type=submit] {
 .btn-ghost:link,
 .btn-ghost:visited {
     border: 1px solid #000;
-    color: rgba(250, 0, 100, 1);
+    color: #00bbff;
 }
-
-
-/*0to255.com color variation*/
 
 .btn:hover,
 .btn:active,
 input[type=submit]:hover,
 input[type=submit]:active {
-    background-color: rgba(250, 0, 100, 1);
+    background-color: #00bbff;
 }
 
 .btn-full:hover,
@@ -206,7 +200,6 @@ input[type=submit]:active {
     border: 1px solid #fff;
     color: #fff;
 }
-
 
 /* HEADER COMPONENTS                    */
 
@@ -261,7 +254,7 @@ header {
     margin-bottom: 0px;
     padding-top: 0px;
     width: 100%;
-    background: #fff;
+    background: #00bbff;
 }
 
 .main-links {
@@ -276,7 +269,7 @@ header {
 
 .main-nav li a:link,
 .main-nav li a:visited {
-    color: #000;
+    color: #fff;
     text-decoration: none; 
     text-transform:  uppercase;
     font-size: 130%;
@@ -289,7 +282,7 @@ header {
 
 .main-nav li a:hover,
 .main-nav li a:active {
-    border-bottom: 2px solid #e67e22;
+    border-bottom: 2px solid #ffaa00;
 }
 
 
@@ -450,9 +443,9 @@ header {
 
 .works-step div {
     /* selects numbers */
-    color: #e67e22;
+    color: #ffaa00;
     /* format color of number */
-    border: 2px solid #e67e22;
+    border: 2px solid #ffaa00;
     /*  */
     display: inline-block;
     /* element wont force a line break, element will be side by side with text */
@@ -584,7 +577,7 @@ cite img {
     font-size: 300%;
     font-weight: 300;
     margin-bottom: 10px;
-    color: #e67e22;
+    color: #ffaa00;
 }
 
 .plan-price span {
@@ -773,7 +766,6 @@ footer p {
     text-align: center;
     margin-top: 20px;
 }
-
 
 /* ANIMATIONS */
 
